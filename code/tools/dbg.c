@@ -1,9 +1,9 @@
 #pragma once
 #include <stdio.h>
 
-#define dbg(value,TYPE)             \
-({	typeof(value) ty;               \
-    #if (typeof(value)==TYPE) printf(#value":%d\n",value);    \
+#define dbg(value,TYPE)                                         \
+({	typeof(value) ty;                                           \
+    #if (typeof(value)==TYPE) printf(#value":%d\n",value);      \
 })
 
 int main(){

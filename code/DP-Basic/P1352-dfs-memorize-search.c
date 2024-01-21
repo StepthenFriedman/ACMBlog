@@ -5,9 +5,8 @@
 
 typedef struct node{
     long long r,len;
-    int maxlen;
     struct node** list;
-    long long rsp,rsa;
+    long long rsa,rsp;
 }node;
 
 node *list[LEN];
@@ -29,7 +28,7 @@ long long dfs(node* mst,int headPresent){
         mst->rsp=present;
     }
     next1:
-    if (mst->rsp) {
+    if (mst->rsa) {
         absent=mst->rsa;
         goto next2;
     }
@@ -49,9 +48,8 @@ int main(){
         node *tmpn=(node*)malloc(sizeof(node));
         tmpn->r=ipt;
         tmpn->len=0;
-        tmpn->rsp=tmpn->rsa=0;
-        tmpn->maxlen=100;
-        node **tmpl=(node**)malloc(sizeof(node*)*100);
+        tmpn->rsa=tmpn->rsp=0;
+        node **tmpl=(node**)malloc(sizeof(node*)*6000);
         tmpn->list=tmpl;
         list[i]=tmpn;
     }
@@ -60,10 +58,6 @@ int main(){
         node* master=list[ipt2-1];
         node* slave=list[ipt-1];
         master->list[master->len++]=slave;
-        if (master->len>=master->maxlen-1) {
-            master->maxlen+=1000;
-            master->list=(node**)realloc(master->list,master->maxlen*sizeof(node*));
-        }
         slaves[ipt-1]=1;
     }
     node* master;

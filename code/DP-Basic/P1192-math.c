@@ -3,6 +3,7 @@
 
 /*
 a routine of 100003 destroy the ascending character of the sequence.
+the result could be nagative,
 therefore unsigned long long would cause WA.
 */
 

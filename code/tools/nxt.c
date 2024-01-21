@@ -1,9 +1,5 @@
 #include <stdio.h>
 
-typedef struct SAM{
-
-}
-
 int main(){
     for(int i=n-1;i>=0;--i){
         for(int j=1;j<=26;++j) nxt[i][j]=nxt[i+1][j];
