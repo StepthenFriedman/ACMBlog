@@ -7,7 +7,7 @@ char data[maxn<<1];
 int p[maxn<<1]={0},
     left[maxn<<1]={0},
     right[maxn<<1]={0},
-cnt,ans;
+cnt;
 void qr(){
     cnt=1;
     char c=getchar();
