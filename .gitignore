@@ -30,3 +30,15 @@
 *.exe
 *.out
 *.app
+
+# Data
+*.in
+
+# Rust
+*.toml
+*.json
+*.cargo-lock
+*.lock
+code/String/target
+code/Tree/target
+code/DP-Basic/target

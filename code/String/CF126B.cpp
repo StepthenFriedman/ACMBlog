@@ -20,10 +20,13 @@ int main(){
     n=(int)s.length();
     vector<int> pi=kmp(s,n);
     int len=pi[n-1];
-    for (i=0;i<n;i++){
-        if (pi[i]==len){
-            goto ok;
+    while (len>0){
+        for (i=len-1;i<n-1;i++){
+            if (pi[i]==len){
+                goto ok;
+            }
         }
+        len=pi[len-1];
     }
     cout<<"Just a legend\n";
     return 0;
