@@ -8,11 +8,14 @@
 #define left(x) ((x)-(lowbit(x)))
 #define dbg(arr) printf(#arr": "); for (int iii=1;iii<=n;iii++) printf("%lld ",arr[iii]); putchar('\n');
 
+/*
+the situation where dulplicate message are sent wans't thought of.
+*/
+
 ll n;
 ll position[MAXN]={0};
 ll res[MAXN]={0};
 ll tree[MAXN]={0};
-ll sub[MAXN]={0};
 
 void add(ll i,ll num){
 	//from i to n
@@ -34,10 +37,8 @@ int main(){
 	j=m;
 	for (i=0;i<m;i++){
 		scanf("%lld",&ipt);
-		ll temp=ask(ipt);
-		res[ipt]=max(res[ipt],temp+ipt-sub[ipt]);
+		res[ipt]=ask(ipt)+ipt;
 		add_period(1,ipt,1);
-		sub[ipt]=temp;
 		//dbg(tree);
 		position[ipt]=j--;
 	}

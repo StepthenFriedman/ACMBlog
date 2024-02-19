@@ -1,65 +1,63 @@
-#include<bits/stdc++.h>
-#define ls o<<1
-#define rs o<<1|1
+#include <bits/stdc++.h>
 using namespace std;
-const int maxn=6e5+5;
-int T;
-int n,m,q[maxn>>1],ans;
-int t[maxn<<2];
-void pushup(int o){
-	t[o]=t[ls]+t[rs];
-	return ;
+
+//the key problem to difference array.
+
+int read()
+{
+    char s;
+    int k=0,base=1;
+    while((s=getchar())!='-'&&s!=EOF&&!(s>='0'&&s<='9'));
+    if(s==EOF)exit(0);
+    if(s=='-')base=-1,s=getchar();
+    while(s>='0'&&s<='9')
+    {
+        k=k*10+(s-'0');
+        s=getchar();
+    }
+    return k*base;
 }
-void update(int o,int l,int r,int pos,int val){
-	if(l==r){
-		t[o]+=val;
-		return ;
-	}
-	int mid=l+r>>1;
-	if(pos<=mid)update(ls,l,mid,pos,val);
-	else update(rs,mid+1,r,pos,val);
-	pushup(o);
+
+const int MAXN = 600005;
+int n, m, mini[MAXN], maxi[MAXN], c[MAXN], pos[MAXN];
+void update(int x, int v) {for(; x <= n+m; x += (x&-x)) c[x] += v;}
+//change the value in [x,n].
+
+//normal comperhension: change the value of x.
+
+void ckmax(int &a,int b){
+	if (a<b) a=b;
 }
-void query(int o,int l,int r,int x,int y){
-	if(x<=l&&r<=y){
-		ans+=t[o];
-		return ;
+int query(int x) {int ans = 0;for(; x; x -= (x&-x)) ans += c[x];return ans;}
+//query the value of x.
+//to watch the whole array, print query(x) in [1,n].
+
+//normal comperhension: query the sum of [1,x].
+//to watch the whole array, print query(x)-query(x-1) in [1,n].
+
+signed main()
+{
+	freopen("../../data/CF1288E.in","r",stdin);
+	cin >> n >> m;
+	for(int i=1;i<=n;i++) mini[i] = maxi[i] = i, 
+		pos[i] = m+i, //insert m blocks before the first messsage.
+		update(pos[i], 1);
+	int now = m;
+	
+	int dbg=m+n;
+
+	while (m--){
+		int i = read(); mini[i] = 1;
+		ckmax(maxi[i], query(pos[i]));
+		update(pos[i], -1); 
+		for (int j=1;j<=dbg;j++) cout<<query(j)<<' ';
+		cout<<endl;
+		pos[i] = now--;
+		update(pos[i], 1);
+		for (int j=1;j<=dbg;j++) cout<<query(j)<<' ';
+		cout<<endl<<endl;
 	}
-	int mid=l+r>>1;
-	if(x<=mid)query(ls,l,mid,x,y);
-	if(y>mid)query(rs,mid+1,r,x,y);
-	return ;
-}
-int mn[maxn>>1],mx[maxn>>1],pos[maxn>>1],cnt;
-int main(){
-	T=1;
-    freopen("../../data/CF1288E.in","r",stdin);
-	while(T--){
-		cin>>n>>m;
-		for(int i=1;i<=n;i++){
-			pos[i]=i+m;
-			update(1,0,n+m,i+m,1);
-			mn[i]=mx[i]=i;
-		}
-		cnt=m;
-		for(int i=1;i<=m;i++){
-			cin>>q[i];
-			mn[q[i]]=1;
-			ans=0;
-			query(1,0,n+m,0,pos[q[i]]);
-			mx[q[i]]=max(mx[q[i]],ans);
-			update(1,0,n+m,pos[q[i]],-1);
-			pos[q[i]]=cnt;
-			cnt--;
-			update(1,0,n+m,cnt+1,1);
-		}
-		for(int i=1;i<=n;i++){
-			ans=0;
-			query(1,0,n+m,0,pos[i]);
-			mx[i]=max(mx[i],ans);
-		}
-		for(int i=1;i<=n;i++){
-			cout<<mn[i]<<' '<<mx[i]<<endl;
-		}
-	}
+	for(int i=1;i<=n;i++) ckmax(maxi[i], query(pos[i]));
+	for(int i=1;i<=n;i++) printf("%d %d\n", mini[i], maxi[i]);
+    return 0;
 }

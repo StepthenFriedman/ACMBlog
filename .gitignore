@@ -32,7 +32,7 @@
 *.app
 
 # Data
-*.in
+data/
 
 # Rust
 *.toml
