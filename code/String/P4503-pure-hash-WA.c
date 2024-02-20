@@ -1,10 +1,12 @@
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
-#define EXACT 7
+#include<limits.h>
+#define ll long long
+#define MOD 100000000007
 
 typedef struct hashvalue{
-    long long *s;
+    ll a1,a2,b1,b2;
 }hv;
 
 hv totalhv[30000];
@@ -19,24 +21,21 @@ char cast(char x){
 }
 
 hv hash(char* x,int len){
-    int i,j=1,k;
-    long long *s=calloc(EXACT,sizeof(long long));
-    for (k=0;k<EXACT;k++){
-        for (i=k,j=1;i<len;i+=EXACT) {
-            s[k]+=cast(x[i])*j;
-            j*=-7;
-        }
+    ll a1=0,a2=0,b1=0,b2=0;
+    for (int i=0;i<len;i+=2) {
+        a1=(a1*29+cast(x[i]))%MOD;
+        a2=(a2*31+cast(x[i+1]))%MOD;
     }
-    hv newh={s};
+    for (int i=0;i<len/2;i++){
+        b1=(b1*29+cast(x[i]))%MOD;
+        b2=(b2*31+cast(x[i+len/2]))%MOD;
+    }
+    hv newh={a1,a2,b1,b2};
     return newh;
 }
 
 int hvsame(hv a,hv b){
-    int correct=0;
-    for (int i=0;i<EXACT;i++){
-        correct+=(a.s[i]==b.s[i]);
-    }
-    return (correct>=EXACT-1);
+    return ((a.a1==b.a1)+(a.a2==b.a2)>=1)&&((a.b1==b.b1)+(a.b2==b.b2)>=1);
 }
 
 int main(){

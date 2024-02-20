@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
-char total[1000][1600];
+char total[10000][1600];
 char ipt[1600];
 int main(){
     int n,j,k=0;
