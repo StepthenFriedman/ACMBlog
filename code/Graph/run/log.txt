@@ -1,0 +1,767 @@
+desc: --stacks=yes --heap=yes --massif-out-file=run/log.txt
+cmd: run/mine.run
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=61056
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=448
+heap_tree=detailed
+n0: 0 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+#-----------
+snapshot=2
+#-----------
+time=130028
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=1936
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=217641
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=281370
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=370308
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=439460
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=502666
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=563324
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2392
+heap_tree=detailed
+n1: 4096 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4096 0x48F2BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x4901CDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4900CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4901D95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x48D70CF: __vfscanf_internal (vfscanf-internal.c:628)
+      n1: 4096 0x48D6141: __isoc99_scanf (isoc99_scanf.c:30)
+       n0: 4096 0x1090DA: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+#-----------
+snapshot=9
+#-----------
+time=663871
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=741567
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=807721
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=891413
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=954969
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=1044257
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=1090420
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=1153826
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=1222863
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2672
+heap_tree=peak
+n1: 8192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x48F2BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 8192 0x4901CDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4900CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4901D95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x48D70CF: __vfscanf_internal (vfscanf-internal.c:628)
+      n1: 4096 0x48D6141: __isoc99_scanf (isoc99_scanf.c:30)
+       n0: 4096 0x1090DA: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+   n1: 4096 0x4900F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 4096 0x48FF6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 4096 0x48FF6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 4096 0x48E9CA8: outstring_func (vfprintf-internal.c:239)
+       n1: 4096 0x48E9CA8: __vfprintf_internal (vfprintf-internal.c:1516)
+        n1: 4096 0x49A8C4A: __printf_chk (printf_chk.c:33)
+         n0: 4096 0x109259: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+#-----------
+snapshot=18
+#-----------
+time=1300133
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=1377254
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=1468231
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=1526456
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=1617372
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=1695861
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=1741171
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=1822038
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=1900221
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=1948335
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=2018883
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=2074143
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1968
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=2144552
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=2199838
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1968
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=2280600
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=2325882
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=2401590
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=2502572
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=2553107
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=2654114
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=2755160
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=2830971
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2384
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=2932024
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=2982594
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1968
+heap_tree=detailed
+n1: 8192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x48F2BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 8192 0x4901CDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4900CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4901D95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x48D70CF: __vfscanf_internal (vfscanf-internal.c:628)
+      n1: 4096 0x48D6141: __isoc99_scanf (isoc99_scanf.c:30)
+       n0: 4096 0x1090DA: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+   n1: 4096 0x4900F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 4096 0x48FF6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 4096 0x48FF6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 4096 0x48E9CA8: outstring_func (vfprintf-internal.c:239)
+       n1: 4096 0x48E9CA8: __vfprintf_internal (vfprintf-internal.c:1516)
+        n1: 4096 0x49A8C4A: __printf_chk (printf_chk.c:33)
+         n0: 4096 0x109259: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+#-----------
+snapshot=42
+#-----------
+time=3083580
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=3134051
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=3184711
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=3285773
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=3336411
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=3412147
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=3513207
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2408
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=3588941
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=360
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=3634351
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=3679687
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=3725049
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2672
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=3770341
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1968
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=3815688
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=3861063
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=detailed
+n1: 8192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x48F2BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 8192 0x4901CDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4900CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4901D95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x48D70CF: __vfscanf_internal (vfscanf-internal.c:628)
+      n1: 4096 0x48D6141: __isoc99_scanf (isoc99_scanf.c:30)
+       n0: 4096 0x1090DA: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+   n1: 4096 0x4900F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 4096 0x48FF6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 4096 0x48FF6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 4096 0x48E9CA8: outstring_func (vfprintf-internal.c:239)
+       n1: 4096 0x48E9CA8: __vfprintf_internal (vfprintf-internal.c:1516)
+        n1: 4096 0x49A8C4A: __printf_chk (printf_chk.c:33)
+         n0: 4096 0x109259: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+#-----------
+snapshot=56
+#-----------
+time=3906351
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=3951658
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=3996966
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1968
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=4042256
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=576
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=4087674
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=4132986
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=4178276
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=4223603
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=4268951
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=4314236
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=576
+heap_tree=detailed
+n1: 8192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x48F2BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 8192 0x4901CDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4900CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4901D95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x48D70CF: __vfscanf_internal (vfscanf-internal.c:628)
+      n1: 4096 0x48D6141: __isoc99_scanf (isoc99_scanf.c:30)
+       n0: 4096 0x1090DA: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+   n1: 4096 0x4900F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 4096 0x48FF6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 4096 0x48FF6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 4096 0x48E9CA8: outstring_func (vfprintf-internal.c:239)
+       n1: 4096 0x48E9CA8: __vfprintf_internal (vfprintf-internal.c:1516)
+        n1: 4096 0x49A8C4A: __printf_chk (printf_chk.c:33)
+         n0: 4096 0x109259: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+#-----------
+snapshot=66
+#-----------
+time=4359572
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=4404982
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=4450298
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=4495602
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=4540907
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=4586195
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2056
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=4631489
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=4676848
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=4722149
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=4767572
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=detailed
+n1: 8192 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8192 0x48F2BA3: _IO_file_doallocate (filedoalloc.c:101)
+  n2: 8192 0x4901CDF: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4900CDB: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:485)
+    n1: 4096 0x4901D95: _IO_default_uflow (genops.c:362)
+     n1: 4096 0x48D70CF: __vfscanf_internal (vfscanf-internal.c:628)
+      n1: 4096 0x48D6141: __isoc99_scanf (isoc99_scanf.c:30)
+       n0: 4096 0x1090DA: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+   n1: 4096 0x4900F5F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:744)
+    n1: 4096 0x48FF6D4: _IO_new_file_xsputn (fileops.c:1243)
+     n1: 4096 0x48FF6D4: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1196)
+      n1: 4096 0x48E9CA8: outstring_func (vfprintf-internal.c:239)
+       n1: 4096 0x48E9CA8: __vfprintf_internal (vfprintf-internal.c:1516)
+        n1: 4096 0x49A8C4A: __printf_chk (printf_chk.c:33)
+         n0: 4096 0x109259: main (in /home/stepthenfriedman/Documents/GitHub/ACMBlog/code/Graph/run/mine.run)
+#-----------
+snapshot=76
+#-----------
+time=4813022
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=4858352
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=4903638
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2024
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=4949061
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=4994367
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2440
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=5039699
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=5085000
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=1976
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=5130321
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty
+#-----------
+snapshot=84
+#-----------
+time=5175623
+mem_heap_B=8192
+mem_heap_extra_B=16
+mem_stacks_B=2392
+heap_tree=empty

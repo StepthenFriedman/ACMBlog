@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #define MAXN 100001
 
-
 typedef struct book{
     int len;char read;struct book **list;
 }book;
@@ -23,6 +22,7 @@ void dfs(book *b){
 void bfs(book *b){
     book* q[MAXN];
 	q[0]=b;
+    b->read=0;
     int i=0,j=1;
 	while(i<j){
 		b=q[i];
@@ -38,7 +38,7 @@ int main(){
     int n,m;
     scanf("%d%d",&n,&m);
     for (int i=1;i<=n;i++){
-        all[i].list=(book**)malloc(sizeof(book*)*200);
+        all[i].list=(book**)malloc(sizeof(book*)*100);
     }
     int x,y;
     for (int i=0;i<m;i++){
